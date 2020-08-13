@@ -1,6 +1,3 @@
-provider "azurerm" {
-  features {}
-}
 
 locals {
   ssh_key = lower(var.ssh_key_type) == "generated" ? tls_private_key.ssh[0].public_key_openssh : var.admin_ssh_key_data
